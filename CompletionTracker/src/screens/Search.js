@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import {FlatList, Text, View } from 'react-native';
-import Card from './components/Card';
-import { SearchContext } from './hooks/SearchContext';
-import Search from './components/Search';
+import Card from '../components/Card';
+import { SearchContext } from '../hooks/SearchContext';
+import Search from '../components/Search';
 
 const renderCard = ({item}, index) => {
     return (
@@ -20,14 +20,14 @@ const EmptyList = () => {
             paddingVertical: 20,
             marginTop: '50%'
         }}>
-            <Text style={{ fontSize: 22, fontWeight: '700', textAlign:'center' }}>
+            <Text style={{ fontSize: 22, fontWeight: '700', textAlign:'center', color: 'darkgray' }}>
                 Search for a game or series with the above search bar!
             </Text>
         </View>
     );
 };
 
-const Home = () => {
+const SearchScreen = () => {
     const { searchResult, isSearching } = useContext(SearchContext);
 
     return (
@@ -51,4 +51,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default SearchScreen;

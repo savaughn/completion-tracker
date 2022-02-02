@@ -7,16 +7,16 @@
  */
 
 import React from 'react';
-import Home from './src/Home';
 import { AuthProvider } from './src/hooks/AuthContext';
 import { SearchProvider } from './src/hooks/SearchContext';
+import SearchScreen from './src/screens/Search';
 
 const App = () => {
 
   return (
     <AuthProvider>
       <SearchProvider>
-        <Home />
+        <SearchScreen />
       </SearchProvider>
     </AuthProvider>
   );
