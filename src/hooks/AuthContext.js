@@ -16,7 +16,6 @@ export const AuthProvider = ({
         );
         const tokenData = await token.json();
         const { access_token } = tokenData;
-        // const access_token = 'sariknznycessyuk9cb4nunyal69gl';
         setAccessToken(access_token);
     };
 
