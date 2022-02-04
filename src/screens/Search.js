@@ -33,14 +33,14 @@ const SearchScreen = () => {
     return (
         <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'gray' }}>
             { !isSearching && 
-                <View style={{ flex: 1}}>
+                <View style={{ flex: 1, width: '90%'}}>
                     <FlatList 
                         data={ searchResult }
                         renderItem={ renderCard }
                         keyExtractor={(item) => item.id}
                         style={{ flex: 10, width: '100%'}}
                         numColumns={ 2 }
-                        contentContainerStyle={{ paddingVertical: '15%' }}
+                        contentContainerStyle={{ paddingVertical: '20%' }}
                         ListEmptyComponent={ <EmptyList /> }
                         showsVerticalScrollIndicator={ false }
                     />
