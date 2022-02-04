@@ -39,7 +39,7 @@ const FavoritesScreen = () => {
     const square = 40;
     return (
         <>
-            <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: 'gray', paddingHorizontal: 10, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: 'gray', paddingHorizontal: 10, justifyContent: 'space-between', paddingVertical: 10 }}>
                 <View style={{ height: square, width: square, backgroundColor: 'black', borderRadius: 5, marginRight: 10 }} />
                 <View style={{ flex: 6, justifyContent: 'flex-start' }}>
                     <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', color: 'black' }}>{'Gamertag'.toUpperCase()}</Text>
