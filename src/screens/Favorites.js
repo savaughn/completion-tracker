@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, ScrollView, Text, View } from 'react-native';
 import Card from '../components/Card';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { BADGES } from '../helpers/constants';
 
 const favorites = {
     current: [
@@ -44,10 +45,7 @@ const FavoritesScreen = () => {
                 <View style={{ flex: 6, justifyContent: 'flex-start' }}>
                     <Text style={{ flex: 1, fontSize: 18, fontWeight: 'bold', color: 'black' }}>{'Gamertag'.toUpperCase()}</Text>
                     <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center'}}>
-                        <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'black', paddingRight: 5 }}>O</Text>
-                        <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'black', paddingRight: 5 }}>O</Text>
-                        <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'black', paddingRight: 5 }}>O</Text>
-                        <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'black', paddingRight: 5 }}>O</Text>
+                        { ['Xbox', 'Nintendo', 'Playstation', 'PC'].map(platform => BADGES[platform]())}
                     </View>
                 </View>
                 <Icon color='black' name='settings' size={ 26 }/>
